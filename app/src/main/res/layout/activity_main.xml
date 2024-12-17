@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Image as full background -->
+    <ImageView
+        android:id="@+id/birthdayImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/hbd"
+         />
+
+    <!-- First Text Message -->
+    <TextView
+        android:id="@+id/birthdayMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HAPPY BIRTHDAY TEACHER ANAS !!"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:textColor="#800020"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="150dp" /> <!-- Adjust position as needed -->
+
+    <!-- Second Text Message -->
+    <TextView
+        android:id="@+id/secondMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="From MUHAMMAD BUNYARIT !!"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:textColor="#9c9c00"
+        app:layout_constraintTop_toBottomOf="@id/birthdayMessage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" /> <!-- Adjust the space between the two messages -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
