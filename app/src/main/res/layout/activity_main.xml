@@ -26,7 +26,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="150dp" /> <!-- Adjust position as needed -->
+        android:layout_marginTop="150dp" />
 
     <!-- Second Text Message -->
     <TextView
@@ -40,6 +40,16 @@
         app:layout_constraintTop_toBottomOf="@id/birthdayMessage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp" /> <!-- Adjust the space between the two messages -->
+        android:layout_marginTop="20dp" />
 
+    <!-- Button to Navigate to Second Activity -->
+    <Button
+        android:id="@+id/btnToSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="336dp"
+        android:text="Go to Second Page"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/secondMessage" />
 </androidx.constraintlayout.widget.ConstraintLayout>
