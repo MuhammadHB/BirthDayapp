@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -27,6 +26,12 @@
         <activity
             android:name=".SecondActivity"
             android:exported="true" />
+
+        <!-- ListActivity -->
+        <activity
+            android:name=".ListActivity"
+            android:exported="true" />
+
     </application>
 
 </manifest>

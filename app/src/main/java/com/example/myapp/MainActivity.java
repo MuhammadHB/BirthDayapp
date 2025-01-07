@@ -10,15 +10,26 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main); // Ensure layout file name is correct
+        setContentView(R.layout.activity_main);
 
-        // Find the button by its ID and set an OnClickListener
+        // Find the button by its ID for navigating to the second page
         Button btnToSecond = findViewById(R.id.btnToSecond);
         btnToSecond.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Navigate to SecondActivity
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Find the button by its ID for navigating to ListActivity
+        Button btnToList = findViewById(R.id.btnToList);
+        btnToList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate to ListActivity
+                Intent intent = new Intent(MainActivity.this, ListActivity.class);
                 startActivity(intent);
             }
         });
