@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- TextView for Text -->
-
-
+    <!-- Image for background -->
     <ImageView
         android:id="@+id/wallpaperImage"
         android:layout_width="match_parent"
@@ -15,30 +13,30 @@
         android:scaleType="centerCrop"
         android:src="@drawable/bruh"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- TextView for displaying the dynamic welcome message -->
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/welcomeMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="204dp"
-        android:text="Welcome my name is MUHAMMAB BUNYARIT !!!!"
+        android:layout_marginTop="200dp"
+        android:text="Happy Eid!"
+        android:textSize="24sp"
         android:textColor="#ff33f3"
-        android:textSize="18sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.64"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Button to go back to the first page -->
     <Button
         android:id="@+id/btnToFirst"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Go to First Page"
-        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintTop_toBottomOf="@id/welcomeMessage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="300dp" />

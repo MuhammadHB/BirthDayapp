@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -12,23 +14,33 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Find the button by its ID for navigating to the second page
+        // Find views by their IDs
+        EditText nameInput = findViewById(R.id.nameInput);
         Button btnToSecond = findViewById(R.id.btnToSecond);
+        Button btnToList = findViewById(R.id.btnToList);
+
+        // Set onClickListener for navigating to the second activity
         btnToSecond.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Navigate to SecondActivity
-                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-                startActivity(intent);
+                String name = nameInput.getText().toString().trim(); // Trim spaces from the input
+
+                if (!name.isEmpty()) {
+                    // Pass the name to SecondActivity
+                    Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                    intent.putExtra("USER_NAME", name);
+                    startActivity(intent);
+                } else {
+                    // Show a message if the name field is empty
+                    Toast.makeText(MainActivity.this, "Please enter your name", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
-        // Find the button by its ID for navigating to ListActivity
-        Button btnToList = findViewById(R.id.btnToList);
+        // Set onClickListener for navigating to the ListActivity
         btnToList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Navigate to ListActivity
                 Intent intent = new Intent(MainActivity.this, ListActivity.class);
                 startActivity(intent);
             }
