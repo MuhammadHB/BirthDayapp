@@ -14,7 +14,7 @@ import java.util.List;
 public class ListItemAdapter extends BaseAdapter {
     private Context context;
     private List<ListItem> items;
-
+// constractar of LISTITEMADAPTER class 
     public ListItemAdapter(Context context, List<ListItem> items) {
         this.context = context;
         this.items = items;
