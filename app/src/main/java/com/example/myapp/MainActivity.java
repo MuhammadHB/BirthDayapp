@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         calendar.set(Calendar.YEAR, 2025);
         calendar.set(Calendar.MONTH, Calendar.JANUARY);  // Months are 0-based (April = 3)
         calendar.set(Calendar.DAY_OF_MONTH, 28);  // Eid date
-        calendar.set(Calendar.HOUR_OF_DAY, 12);  // Set time for the notification (e.g., 9:00 AM)
+        calendar.set(Calendar.HOUR_OF_DAY, 13);  // Set time for the notification (e.g., 9:00 AM)
         calendar.set(Calendar.MINUTE, 30);
         calendar.set(Calendar.SECOND, 0);
 
