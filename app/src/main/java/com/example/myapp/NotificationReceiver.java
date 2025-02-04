@@ -6,6 +6,7 @@ import android.app.NotificationManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+
 import androidx.core.app.NotificationCompat;
 
 public class NotificationReceiver extends BroadcastReceiver {
@@ -21,16 +22,19 @@ public class NotificationReceiver extends BroadcastReceiver {
             NotificationChannel channel = new NotificationChannel(
                     CHANNEL_ID,
                     "User Notifications",
-                    NotificationManager.IMPORTANCE_DEFAULT
+                    NotificationManager.IMPORTANCE_HIGH // Set HIGH importance
             );
             notificationManager.createNotificationChannel(channel);
         }
 
         // Create and show the notification
+        String title = intent.getStringExtra("TITLE");
+        String message = intent.getStringExtra("MESSAGE");
+
         Notification notification = new NotificationCompat.Builder(context, CHANNEL_ID)
                 .setSmallIcon(R.drawable.nav)  // Make sure this is a valid drawable
-                .setContentTitle("Eid Reminder")
-                .setContentText("Don't forget to celebrate Eid!")
+                .setContentTitle(title)
+                .setContentText(message)
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setAutoCancel(true)
                 .build();
